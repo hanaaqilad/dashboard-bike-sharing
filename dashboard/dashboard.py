@@ -6,8 +6,8 @@ import os
 from babel.numbers import format_currency
 # sns.set(style='dark')
 
-path_labels = os.getcwd() + '/all_df.csv'
-all_df = pd.read_csv(path_labels)
+# path_labels = os.getcwd() + 'main/dashboard/all_df.csv'
+all_df = pd.read_csv('/main/dashboard/all_df.csv')
 
 all_df['dteday'] = pd.to_datetime(all_df['dteday'])
 all_df['dteday'] = all_df['dteday'].dt.date
