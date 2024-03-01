@@ -2,10 +2,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
+import os
 from babel.numbers import format_currency
 # sns.set(style='dark')
 
-all_df = pd.read_csv('all_df.csv')
+path_labels = os.getcwd() + '/all_df.csv'
+all_df = pd.read_csv(path_labels)
 
 all_df['dteday'] = pd.to_datetime(all_df['dteday'])
 all_df['dteday'] = all_df['dteday'].dt.date
